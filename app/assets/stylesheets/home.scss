@@ -1,0 +1,46 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.loginBox 
+{
+width: 300px;
+margin-top: 40%;    
+padding: 15px 15px 15px 15px ;      
+border: 1px solid gray;    
+border-radius: 10px;
+text-align: center;
+}
+
+#forget
+{
+  margin: 3px 0px 3px 0px;
+}
+
+.btn-login
+{
+  
+margin-top: 5px;
+width: 100%;
+background-color: #BA2424;
+color: white;
+border: 1px solid gray;    
+
+}
+
+.sign-home
+{
+font-size: 8px;
+}
+
+.btn-login:hover 
+{
+background-color: white;
+color: black;
+border: 1px solid gray;    
+border-radius: 5px;
+}
