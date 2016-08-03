@@ -5,5 +5,4 @@ class HomeController < ApplicationController
   def application
   end
 
-
 end
