@@ -3,4 +3,16 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_one :major
+
+  has_one :aim_license_container
+  has_one :like_license_container
+  has_one :got_license_container
+
+  has_many :anony_posts
+  has_many :anony_comments
+  has_many :book_posts
+  has_many :book_comments
+
 end

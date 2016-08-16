@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+전기기사일정:
+  iswtest: true
+  isptest: true
+  license: 전기기사
+
+정보처리기사일정:
+  iswtest: true
+  isptest: true
+  license: 정보처리기사
+
+한국사검정능력시험일정:
+  iswtest: true
+  isptest: false
+  license: 한국사검정능력시험
