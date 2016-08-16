@@ -1,5 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+<<<<<<< HEAD
 one:
   qualifyitem: MyString
   enrollnum: MyString
@@ -17,3 +18,14 @@ two:
   issuedate: 2016-08-12
   etc: MyString
   got_license_container_id: 1
+=======
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value
+>>>>>>> yeseul

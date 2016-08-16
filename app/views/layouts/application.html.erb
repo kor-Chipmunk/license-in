@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
 	<title>
 		<%= yield :title %>  
 	</title>
     <%= csrf_meta_tags %>
+=======
+    <title>쯩인</title>
+    <%= csrf_meta_tags %>
+    
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+
+    <!-- Compiled and minified JavaScript -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+>>>>>>> yeseul
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     
+<<<<<<< HEAD
     <!-- 합쳐지고 최소화된 최신 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">    
     <!-- 부가적인 테마 -->
@@ -20,5 +35,21 @@
 
   <body>
     <%= yield %>
+=======
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.dropdown-button').dropdown();
+        $('ul.tabs').tabs();
+        
+    });
+    </script>
+ 
+  </head>
+
+  <body>
+   
+    <%= yield %>
+
+>>>>>>> yeseul
   </body>
 </html>

@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+=======
+>>>>>>> yeseul
 one:
   user_id: 1
 
 two:
+<<<<<<< HEAD
   user_id: 2
+=======
+  user_id: 2
+  
+>>>>>>> yeseul

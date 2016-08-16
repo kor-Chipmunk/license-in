@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160812081321) do
+=======
+ActiveRecord::Schema.define(version: 20160816111214) do
+>>>>>>> yeseul
 
   create_table "aim_license_containers", force: :cascade do |t|
     t.integer  "user_id"
@@ -81,10 +85,17 @@ ActiveRecord::Schema.define(version: 20160812081321) do
     t.boolean  "isofficial"
     t.string   "implementagency"
     t.string   "description"
+<<<<<<< HEAD
     t.integer  "aim_license_container_id"
     t.integer  "like_license_container_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+=======
+    t.integer  "aim_license_container"
+    t.integer  "like_license_container"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+>>>>>>> yeseul
   end
 
   create_table "like_license_containers", force: :cascade do |t|
@@ -103,7 +114,12 @@ ActiveRecord::Schema.define(version: 20160812081321) do
   create_table "practice_test_schedules", force: :cascade do |t|
     t.date     "appdatestart"
     t.date     "appdateend"
+<<<<<<< HEAD
     t.date     "testdate"
+=======
+    t.date     "testdatestart"
+    t.date     "testdateend"
+>>>>>>> yeseul
     t.date     "testresultdate"
     t.integer  "test_schedule_id"
     t.datetime "created_at",       null: false
