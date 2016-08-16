@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+전기기사:
+  name: 전기기사
+  isofficial: true
+  implementagency: 한국산업인력공단
+  description: 전기기사 자격증 입니다.
+
+정보처리기사:
+  name: 정보처리기사
+  isofficial: true
+  implementagency: 한국산업인력공단
+  description: 정보처리 기사 입니다.
+
+한국사검정능력시험:
+  name: 한국사검정능력시험
+  isofficial: false
+  implementagency: 국사편찬위원회
+  description: 한국사검정능력시험 입니다.

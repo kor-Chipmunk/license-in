@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+전자전기공학부:
+  name: 전자전기공학부
+  user_id: 0
+
+컴퓨터공학부:
+  name: 컴퓨터공학부
+  user_id: 0

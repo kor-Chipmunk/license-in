@@ -1,0 +1,138 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#indexFull
+{
+    background-image: url("/assets/indexbg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+    
+    .indexLeft
+    {
+        height: 500px;
+        padding: 200px; 
+        color: white;
+        text-align: center;
+    }
+        
+
+    .indexRight
+    {
+    height: 500px;
+    padding-top: 120px;
+        .loginBox 
+        {
+        width: 300px;
+        padding: 15px 15px 15px 15px ;      
+        background-color: #F5F5F5;
+        opacity: 0.9;
+        border: 3px solid #808080;    
+        border-radius: 10px;
+        
+        text-align: center;
+        }
+}
+    
+    
+}
+
+
+
+#forget
+{
+  margin: 3px 0px 3px 0px;
+}
+
+
+
+
+.btn-index
+{
+box-shadow: none;
+margin-top: 5px;
+width: 100%;
+background-color: transparent;
+border: 2px solid #FE3939; 
+border-radius: 4px;
+color: #FE3939;
+
+}
+    .btn-index:hover
+    {
+        box-shadow: none;
+        background-color: #FE3939;
+        color: white;
+        border: none; 
+    }
+    
+    
+.btn-tour
+{
+background-color: white;
+border: 5px solid white;
+border-radius: 90px;
+color: #FE3939;
+width: 40%;
+height: 50px;
+
+
+    .btn-tour:hover
+    {
+        background-color: #FE3939;
+        border: 5px solid white;
+        color: white;
+    }
+}
+    
+
+.sign-home
+{
+font-size: 8px;
+}
+
+
+
+
+.tour
+{
+text-align: center;
+}
+
+
+
+#introduce
+{
+    margin-top: 100px;
+    height: 300px;
+    padding: 15px 15px 15px 15px ; 
+}
+
+.section
+{
+text-align: center;
+}
+     
+
+.introduce-img
+{
+    width: 800px;
+    vertical-align: middle;
+}
+
+.brand-img
+{
+    width: 800px;
+}
+
+.introduce-right {
+    text-align: right;
+}
+
+.introduce-left {
+    text-align: left;
+}

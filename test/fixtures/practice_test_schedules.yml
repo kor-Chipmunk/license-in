@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+전기기사실기일정1:
+  appdatestart: 2016-03-21
+  appdateend: 2016-03-24
+  testdatestart: 2016-04-16
+  testdateend: 2016-04-29
+  testresultdate: 2016-05-06
+  test_schedule: 전기기사일정
+
+전기기사실기일정2:
+  appdatestart: 2016-05-30
+  appdateend: 2016-06-02
+  testdatestart: 2016-06-25
+  testdateend: 2016-07-08
+  testresultdate: 2016-07-15
+  test_schedule: 전기기사일정
+
+전기기사실기일정3:
+  appdatestart: 2016-09-05
+  appdateend: 2016-09-08
+  testdatestart: 2016-10-08
+  testdateend: 2016-10-21
+  testresultdate: 2016-11-18
+  test_schedule: 전기기사일정
+
+정보처리기사실기일정1:
+  appdatestart: 2016-03-21
+  appdateend: 2016-03-24
+  testdatestart: 2016-04-16
+  testdateend: 2016-04-29
+  testresultdate: 2016-05-06
+  test_schedule: 정보처리기사일정
+
+정보처리기사실기일정2:
+  appdatestart: 2016-05-30
+  appdateend: 2016-06-02
+  testdatestart: 2016-06-25
+  testdateend: 2016-07-08
+  testresultdate: 2016-07-15
+  test_schedule: 정보처리기사일정
+
+정보처리기사실기일정3:
+  appdatestart: 2016-09-05
+  appdateend: 2016-09-08
+  testdatestart: 2016-10-08
+  testdateend: 2016-10-21
+  testresultdate: 2016-11-18
+  test_schedule: 정보처리기사일정
