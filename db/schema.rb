@@ -95,7 +95,6 @@ ActiveRecord::Schema.define(version: 20160816111214) do
 
   create_table "majors", force: :cascade do |t|
     t.string   "name"
-    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -122,8 +121,8 @@ ActiveRecord::Schema.define(version: 20160816111214) do
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
-    t.string   "nickname",               default: "", null: false
-    t.string   "major",                  default: "", null: false
+    t.string   "nickname"
+    t.string   "major"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

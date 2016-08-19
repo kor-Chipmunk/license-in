@@ -5,9 +5,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
-	  ## Customizing Fields
-	  t.string :nickname, null: false, default: ""
-	  t.string :major, null: false, default: ""
+  	  ## Customizing Fields
+  	  t.string :nickname # , null: false, default: ""
+  	  t.string :major # , null: false, default: ""
 
       ## Recoverable
       t.string   :reset_password_token

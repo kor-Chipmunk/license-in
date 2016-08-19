@@ -35,23 +35,34 @@
         border-radius: 10px;
         
         text-align: center;
+        
+        
         }
 }
     
     
 }
 
-
+.log-in
+{
+    color: #757575;
+}
 
 #forget
 {
   margin: 3px 0px 3px 0px;
 }
 
+ .btn-loginBox{
+     background-color: #e53935;
+     
+     &:hover{
+         background-color: #e53935;
+     }
+ }
 
 
-
-.btn-index
+/*.btn-index
 {
 box-shadow: none;
 margin-top: 5px;
@@ -61,31 +72,37 @@ border: 2px solid #FE3939;
 border-radius: 4px;
 color: #FE3939;
 
-}
-    .btn-index:hover
+}*/
+
+
+
+   /* .btn-index:hover
     {
         box-shadow: none;
         background-color: #FE3939;
         color: white;
         border: none; 
-    }
+    }*/
     
     
 .btn-tour
 {
-background-color: white;
-border: 5px solid white;
+background-color: #e53935;
+/*border: 5px solid white;*/
 border-radius: 90px;
-color: #FE3939;
+opacity: 0.9;
+color: white;
 width: 40%;
 height: 50px;
+line-height: 50px;
 
+font-size: 24px;
+text-align: center;
 
-    .btn-tour:hover
+    &:hover
     {
-        background-color: #FE3939;
-        border: 5px solid white;
-        color: white;
+        background-color: #e53935;
+        /*border: 5px solid white;*/
     }
 }
     
@@ -100,7 +117,7 @@ font-size: 8px;
 
 .tour
 {
-text-align: center;
+    text-align: center;
 }
 
 
@@ -114,9 +131,9 @@ text-align: center;
 
 .section
 {
-text-align: center;
+    text-align: center;
 }
-     
+    
 
 .introduce-img
 {
