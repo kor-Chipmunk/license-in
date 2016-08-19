@@ -10,27 +10,28 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    
+
     # 목표, 관심, 획득 컨테이너 생성
-    registrated_user = User.find_by_email(params[:email])
-    logger.debug "registrated_user id = " + registrated_user.id
+    # logger.debug "params[:email] : #{params[:user][:email]}"
+    registrated_user = User.find_by_email(params[:user][:email])
+    # logger.debug "registrated_user id = #{registrated_user.id}"
     
     aimlicensecontainer = AimLicenseContainer.new
     aimlicensecontainer.user = registrated_user
     if aimlicensecontainer.save
-      logger.debug "AimlicenseContainer 저장 성공!"
+      # logger.debug "AimlicenseContainer 저장 성공!"
     end
     
     likelicensecontainer = LikeLicenseContainer.new
     likelicensecontainer.user = registrated_user
     if likelicensecontainer.save
-      logger.debug "LikeLicenseContainer 저장 성공!"
+      # logger.debug "LikeLicenseContainer 저장 성공!"
     end
     
     gotlicensecontainer = GotLicenseContainer.new
     gotlicensecontainer.user = registrated_user
     if gotlicensecontainer.save
-      logger.debug "GotLicenseContainer 저장 성공!"
+      # logger.debug "GotLicenseContainer 저장 성공!"
     end
   end
 

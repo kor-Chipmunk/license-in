@@ -1,9 +1,477 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  license_id: 1
-  major_id: 1
+a:
+  license: 유통관리사
+  major: 유통학과
+  
+b:
+  license: 유통관리사
+  major: 아태물류학과
 
-two:
-  license_id: 1
-  major_id: 1
+c:
+  license: 유통관리사
+  major: 유통물류학과
+
+d:
+  license: 유통관리사
+  major: 산업유통학과
+
+e:
+  license: 유통관리사
+  major: 산업공학과
+
+f:
+  license: 영양사
+  major: 가정교육과
+
+g:
+  license: 영양사
+  major: 식품가공과
+
+h:
+  license: 영양사
+  major: 식품공학과
+
+i:
+  license: 영양사
+  major: 외식산업과
+
+j:
+  license: 영양사
+  major: 식품영양과
+
+k:
+  license: 영양사
+  major: 호텔조리과
+
+l:
+  license: 화공기사
+  major: 고분자공학과
+
+m:
+  license: 화공기사
+  major: 공업화학과
+
+n:
+  license: 화공기사
+  major: 기계공학과
+
+o:
+  license: 화공기사
+  major: 나노공학과
+
+p:
+  license: 화공기사
+  major: 산업공학과
+
+q:
+  license: 화공기사
+  major: 생명공학과
+
+r:
+  license: 화공기사
+  major: 생화학과
+
+s:
+  license: 화공기사
+  major: 섬유공학과
+
+t:
+  license: 화공기사
+  major: 세라믹공학과
+  
+u:
+  license: 사무자동화
+  major: 정보통신학과
+
+v:
+  license: 사무자동화
+  major: 경영학과
+
+w:
+  license: 전기산업기사
+  major: 건설산업과
+
+x:
+  license: 전기산업기사
+  major: 건설정보과
+
+y:
+  license: 전기산업기사
+  major: 공업화학과
+
+z:
+  license: 전기산업기사
+  major: 나노공학과
+
+aa:
+  license: 전기산업기사
+  major: 도시공학과
+
+ab:
+  license: 기계설계기사
+  major: 고분자공학과
+
+ac:
+  license: 기계설계기사
+  major: 교통공학과
+
+ad:
+  license: 기계설계기사
+  major: 기계공학과
+
+ae:
+  license: 기계설계기사
+  major: 기계과
+
+af:
+  license: 기계설계기사
+  major: 기계설계공학과
+
+ag:
+  license: 기계설계기사
+  major: 기계설계과
+
+ah:
+  license: 기계설계기사
+  major: 반도체공학과
+
+ai:
+  license: 기계설계기사
+  major: 산업경영과
+
+aj:
+  license: 기계설계기사
+  major: 세라믹공학과
+
+ak:
+  license: 기계설계기사
+  major: 신소재공학과
+
+al:
+  license: 기계설계기사
+  major: 에너지자원공학과
+
+am:
+  license: 물류관리사
+  major: 무역과
+  
+an:
+  license: 물류관리사
+  major: 무역학과
+
+ao:
+  license: 물류관리사
+  major: 유통학과
+
+ap:
+  license: 시각디자인산업기사
+  major: 건축학과
+
+aq:
+  license: 시각디자인산업기사
+  major: 공업디자인학과
+
+ar:
+  license: 시각디자인산업기사
+  major: 공연제작과
+
+as:
+  license: 시각디자인산업기사
+  major: 공예과
+
+at:
+  license: 시각디자인산업기사
+  major: 광고기획과
+
+au:
+  license: 시각디자인산업기사
+  major: 광고디자인과
+
+av:
+  license: 시각디자인산업기사
+  major: 디지털디자인과
+
+aw:
+  license: 시각디자인산업기사
+  major: 디지털미디어과
+
+ax:
+  license: 시각디자인산업기사
+  major: 멀티미디어과
+
+ay:
+  license: 시각디자인산업기사
+  major: 미디어학과
+
+az:
+  license: 위험물산업기사
+  major: 건축공학과
+
+ba:
+  license: 위험물산업기사
+  major: 공업학과
+
+bb:
+  license: 위험물산업기사
+  major: 물리학과
+
+bc:
+  license: 위험물산업기사
+  major: 산업안전과
+
+bd:
+  license: 위험물산업기사
+  major: 생명공학과
+
+be:
+  license: 위험물산업기사
+  major: 생물학과
+
+bf:
+  license: 위험물산업기사
+  major: 소방방재학과
+
+bg:
+  license: 위험물산업기사
+  major: 신소재공학과
+
+bh:
+  license: 위험물산업기사
+  major: 신소재응용과
+
+bi:
+  license: 위험물산업기사
+  major: 안전공학과
+
+bj:
+  license: 위험물산업기사
+  major: 재료과
+
+bk:
+  license: 위험물산업기사
+  major: 품질관리과
+
+bl:
+  license: 위험물산업기사
+  major: 화학공학과 
+
+bm:
+  license: 위험물산업기사
+  major: 환경공학과
+
+bn:
+  license: 전기기사
+  major: 전자전기공학과
+
+bo:
+  license: 전기기사
+  major: 전기공학과
+
+bp:
+  license: 전기기사
+  major: 기계과
+
+bq:
+  license: 전기기사
+  major: 기계공학과
+
+br:
+  license: 전기기사
+  major: 광학공학과
+
+bs:
+  license: 전기기사
+  major: 국방기술학과
+
+bt:
+  license: 전기기사
+  major: 금속공학과
+
+bu:
+  license: 전기기사
+  major: 반도체학과
+
+bv:
+  license: 전기기사
+  major: 세라믹공학과
+
+bw:
+  license: 토목기사
+  major: 건설산업과
+
+bx:
+  license: 토목기사
+  major: 건설정보과
+
+by:
+  license: 토목기사
+  major: 건축공학과
+
+bz:
+  license: 토목기사
+  major: 건축과
+
+ca:
+  license: 토목기사
+  major: 교통공학과
+
+cb:
+  license: 토목기사
+  major: 농공학과
+
+cc:
+  license: 토목기사
+  major: 도시계획학과
+
+cd:
+  license: 토목기사
+  major: 도시공학과
+
+ce:
+  license: 토목기사
+  major: 시스템경영공학과
+
+cf:
+  license: 토목기사
+  major: 지역개발학과
+
+cg:
+  license: 토목기사
+  major: 철도시설토목과
+
+ch:
+  license: 사회조사분석사
+  major: 경영회계정보과
+
+ci:
+  license: 사회조사분석사
+  major: 국제경영및통상학과
+
+cj:
+  license: 사회조사분석사
+  major: 통계학과
+
+ck:
+  license: 공인회계사
+  major: 경영정보과
+
+cl:
+  license: 공인회계사
+  major: 경영학과
+
+cm:
+  license: 공인회계사
+  major: 경영회계정보과
+
+cn:
+  license: 공인회계사
+  major: 경제학과
+
+co:
+  license: 공인회계사
+  major: 금융보험과
+
+cp:
+  license: 건축기사
+  major: 건설산업과
+
+cq:
+  license: 건축기사
+  major: 건설정보과
+
+cr:
+  license: 건축기사
+  major: 건축공학과
+
+cs:
+  license: 건축기사
+  major: 건축과
+
+ct:
+  license: 건축기사
+  major: 도시공학과
+
+cu:
+  license: 일반기계기사
+  major: 건설산업과
+
+cv:
+  license: 일반기계기사
+  major: 금형설계과
+
+cw:
+  license: 일반기계기사
+  major: 기계공학과
+
+cx:
+  license: 일반기계기사
+  major: 기계과
+
+cy:
+  license: 일반기계기사
+  major: 기계설계과
+
+cz:
+  license: 일반기계기사
+  major: 나노공학과
+
+da:
+  license: 일반기계기사
+  major: 산업설비자동화과
+
+db:
+  license: 일반기계기사
+  major: 생물산업기계공학과
+
+dc:
+  license: 일반기계기사
+  major: 에너지자원공학과
+
+dd:
+  license: 일반기계기사
+  major: 재료과
+
+de:
+  license: 정보처리기사
+  major: E비지니스과
+
+df:
+  license: 정보처리기사
+  major: 건설산업과
+
+dg:
+  license: 정보처리기사
+  major: 건설정보과
+
+dh:
+  license: 정보처리기사
+  major: 게임공학과
+
+di:
+  license: 정보처리기사
+  major: 경영정보과
+
+dj:
+  license: 정보처리기사
+  major: 경영학과
+
+dk:
+  license: 정보처리기사
+  major: 경찰행정학과
+
+dl:
+  license: 정보처리기사
+  major: 관광경영학과
+
+dm:
+  license: 정보처리기사
+  major: 교육공학과
+
+dn:
+  license: 정보처리기사
+  major: 도시계획학과
+
+do:
+  license: 정보처리기사
+  major: 디지털정보과

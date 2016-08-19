@@ -1,0 +1,40 @@
+// Place all the styles related to the MyAim controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.row { margin-bottom: 0; }
+
+.aim-card:first-child {
+    margin-top: 30px;
+}
+
+.aim-card {
+    height: 200px !important;
+
+    // background-color: white;
+    // border-radius: 30px;
+    // height: 200px;
+    // width: 400px;
+    // text-align: center;
+    // margin-top: 30px;
+    
+    &:first-child { margin-top: 30px; }
+    
+    .btn-aim-card {
+        margin: 0 auto;
+        width: 74px !important;
+        height: 74px !important;
+        
+        // background-color: transparent;
+        // top: 50%;
+        // margin-top: -18.5px;
+        // text-align: center;
+        // box-shadow: 0%;
+        
+        .aim-icon {
+            font-size: 64px;
+            line-height: 76px;
+            color: #bdbdbd;
+        }
+    }
+}

@@ -1,3 +1,19 @@
-<%= render :partial => "home/partials/header" %>
-
-<h1>중고책</h1>
+<div class="container">
+ <div class="card card-book">
+    <div class="card book-image waves-effect waves-block waves-light">
+        <a class="btn btn-book btn-floating waves-effect">
+        <i class="icon icon-book material-icons">add</i></a>
+      <!---img class="activator activator-book" src="/assets/logo.png"--->
+    </div>
+    
+    <div class="card-content content-book">
+      <span class="card-title activator grey-text text-darken-4">제목<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">링크입니다</a></p>
+    </div>
+    <div class="card-reveal reveal-book">
+      <span class="card-title grey-text text-darken-4">제목<i class="material-icons right">close</i></span>
+      <p>가격과 내용</p>
+    </div>
+  </div>
+</div> 
+         

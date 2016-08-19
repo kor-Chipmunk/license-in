@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
   <div id="indexFull"> 
     <div class="row">
@@ -10,26 +9,11 @@
       </div>
       <div class="col s4">
         <div class="indexRight">
-          <div class="loginBox">
-            <form class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post">
-              <input name="utf8" type="hidden" value="&#x2713;" />
-              <input type="hidden" name="authenticity_token" value="YtXetsjpuSV9dv/WN06PgVQojfr6rSFa18iLgoZaFmN2FOXyUCGPEuOCg4eA+ktcEn/mlyYbUH+tb1yMc/W18g==" />
-              <div class="field">
-                <input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" placeholder="이메일" />
-                <input autocomplete="off" type="password" name="user[password]" id="user_password" placeholder="비밀번호" />
-              </div>
-              <div class="actions">
-                <input type="submit" name="commit" class="btn btn-index" value="로그인" data-disable-with="Log in"/>
-              </div>
-            </form>
-            <br/>
-            <a href="/users/sign_up">회원가입</a>
-            <a href="/users/password/new">비밀번호 찾기</a><br />
-          </div>
+          <%= render 'home/shared/loginBox' %>
         </div>  
       </div>
       <div class="col s6 offset-s3 tour">
-          <a href="/home/main" class="btn btn-tour">둘러보기</a>
+          <a href="/home/main" class="btn btn-tour waves-effect waves-light">둘러보기</a>
       </div>        
     </div> <!-- row-->
   </div> <!-- indexfull-->
