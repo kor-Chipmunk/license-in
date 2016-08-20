@@ -1,0 +1,503 @@
+/* line 6, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+.community {
+  margin: 0px auto;
+  border-style: solid;
+  border-color: gray;
+  border-width: thin;
+  background-color: white;
+  padding: 50px 10px;
+}
+
+/* line 17, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+.btn-community {
+  border-style: solid;
+  border-color: #f44336;
+  border-width: thin;
+  border-radius: 10px;
+  background-color: white;
+  color: #f44336;
+  width: 70px;
+  padding: 0;
+}
+
+/* line 29, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+.btn-community:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* line 35, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 42, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 46, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 52, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+#notice {
+  color: green;
+}
+
+/* line 58, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 65, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 71, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 79, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 90, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 98, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/communities.scss */
+label {
+  display: block;
+}
+/* line 8, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+#indexFull {
+  background-image: url("/assets/indexbg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+}
+/* line 15, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+#indexFull .indexLeft {
+  height: 500px;
+  padding: 200px;
+  color: white;
+  text-align: center;
+}
+/* line 24, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+#indexFull .indexRight {
+  height: 500px;
+  padding-top: 120px;
+}
+/* line 28, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+#indexFull .indexRight .loginBox {
+  width: 300px;
+  padding: 15px 15px 15px 15px;
+  background-color: #F5F5F5;
+  opacity: 0.9;
+  border: 3px solid #808080;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* line 46, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.log-in {
+  color: #757575;
+}
+
+/* line 51, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+#forget {
+  margin: 3px 0px 3px 0px;
+}
+
+/* line 56, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.btn-loginBox {
+  background-color: #e53935;
+}
+/* line 59, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.btn-loginBox:hover {
+  background-color: #e53935;
+}
+
+/*.btn-index
+{
+box-shadow: none;
+margin-top: 5px;
+width: 100%;
+background-color: transparent;
+border: 2px solid #FE3939; 
+border-radius: 4px;
+color: #FE3939;
+
+}*/
+/* .btn-index:hover
+ {
+     box-shadow: none;
+     background-color: #FE3939;
+     color: white;
+     border: none; 
+ }*/
+/* line 88, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.btn-tour {
+  background-color: #e53935;
+  /*border: 5px solid white;*/
+  border-radius: 90px;
+  opacity: 0.9;
+  color: white;
+  width: 40%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  text-align: center;
+}
+/* line 102, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.btn-tour:hover {
+  background-color: #e53935;
+  /*border: 5px solid white;*/
+}
+
+/* line 110, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.sign-home {
+  font-size: 8px;
+}
+
+/* line 118, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.tour {
+  text-align: center;
+}
+
+/* line 125, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+#introduce {
+  margin-top: 100px;
+  height: 300px;
+  padding: 15px 15px 15px 15px;
+}
+
+/* line 132, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.section {
+  text-align: center;
+}
+
+/* line 138, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.introduce-img {
+  width: 800px;
+  vertical-align: middle;
+}
+
+/* line 144, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.brand-img {
+  width: 800px;
+}
+
+/* line 149, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.introduce-right {
+  text-align: right;
+}
+
+/* line 153, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/index.scss */
+.introduce-left {
+  text-align: left;
+}
+/* line 6, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/license.scss */
+.license {
+  padding-top: 3%;
+  padding-left: 3%;
+  margin-left: 230px;
+}
+/* line 5, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+.row {
+  margin-bottom: 0;
+}
+
+/* line 7, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+.aim-card:first-child {
+  margin-top: 30px;
+}
+
+/* line 11, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+.aim-card {
+  height: 200px !important;
+}
+/* line 21, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+.aim-card:first-child {
+  margin-top: 30px;
+}
+/* line 23, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+.aim-card .btn-aim-card {
+  margin: 0 auto;
+  width: 74px !important;
+  height: 74px !important;
+}
+/* line 34, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+.aim-card .btn-aim-card .aim-icon {
+  font-size: 64px;
+  line-height: 76px;
+  color: #bdbdbd;
+}
+/* line 41, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+.aim-card .card-content {
+  margin: 0 auto;
+}
+/* line 44, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+.aim-card .card-content .license-name {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 3px;
+}
+/* line 50, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+.aim-card .card-content .d-day {
+  font-size: 2em;
+  margin-right: 5px;
+}
+
+/* line 57, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+  /* line 62, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_aim.scss */
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+/* line 6, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_license.scss */
+.manage-card {
+  background-color: white;
+  border-radius: 30px;
+  height: 200px;
+  width: 400px;
+  text-align: center;
+  margin-top: 30px;
+}
+/* line 14, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_license.scss */
+.manage-card .btn-manage-card {
+  background-color: transparent;
+  top: 50%;
+  margin-top: -18.5px;
+  text-align: center;
+  box-shadow: 0%;
+}
+/* line 21, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/my_license.scss */
+.manage-card .btn-manage-card .manage-icon {
+  width: 24px !important;
+  height: 24px !important;
+  color: #bdbdbd;
+}
+/* line 1, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 10, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 17, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 23, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 26, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 30, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 36, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 40, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 47, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 52, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 56, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 62, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 70, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 81, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 87, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+@charset "UTF-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+@font-face {
+  font-family: 나눔고딕;
+  src: url(font/NanumGothic.eot);
+}
+/* line 19, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+body, td, a, p {
+  font-family: 나눔고딕;
+  color: black;
+}
+
+/* line 21, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+html {
+  min-height: 100%;
+}
+
+/* line 26, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+body {
+  overflow: auto;
+  height: 100%;
+  background-color: #f2f2f2;
+  margin-bottom: 60px;
+}
+
+/* line 34, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+.container {
+  padding-top: 100px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* line 41, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+nav nav .brand-logo {
+  font-size: 1.1rem;
+}
+
+/* line 49, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+nav ul a {
+  color: gray;
+}
+
+/* line 54, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+  margin-left: 3px;
+}
+
+/* line 61, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+.navbar-brand img {
+  max-height: 60%;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 2%;
+  margin-bottom: auto;
+}
+
+/* line 70, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+.side-nav {
+  position: relative;
+  /*margin-top: 64px;*/
+  width: 230px;
+  height: 100%;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  border-right: solid 1px #e9eced;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* line 83, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+footer {
+  position: absolute;
+  bottom: -66px;
+  display: inline-block;
+  width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+/* line 90, /Users/dutrkxo/Desktop/rails/license-in/app/assets/stylesheets/application.scss */
+footer .footer-img {
+  height: 50px;
+  vertical-align: center;
+}

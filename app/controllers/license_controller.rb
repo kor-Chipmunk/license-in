@@ -12,10 +12,6 @@ class LicenseController < ApplicationController
 		@gotcontainer = current_user.got_license_container
     end
     
-    def new
-        
-    end
-    
     def create
         type = params[:type]
         id = license_params
@@ -27,11 +23,7 @@ class LicenseController < ApplicationController
         
     end
     
-    def edit
-        
-    end
-    
-    def update
+	def update
     
     end
     

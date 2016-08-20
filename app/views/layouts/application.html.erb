@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>쯩인</title>
 		<%= csrf_meta_tags %>
 
@@ -52,58 +52,5 @@
 		</div>
 		</footer>
 	</body>
-=======
-  <head>
-    <title>쯩인</title>
-    <%= csrf_meta_tags %>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
- 
-  </head>
-
-  <body>
-    
-    <nav role="navigation">
-      <div class="nav-wrapper white">
-        <a href="/" class="navbar-brand"><img class="img-responsive center" src="/assets/logo.png"></a>
-        <ul id="nav-mobile" class="right">
-          <li><a href="/license/myAim" class="active">나의자격증</a></li>
-          <li><a href="/home/search">검색</a></li>
-          <li><a href="/communities">커뮤니티</a></li>
-          <li><a href="/home/book">중고거래</a></li>
-          <li><a href="/home/calendar">달력</a></li>
-          <% if user_signed_in? %>
-          <li><%= current_user.email %></li>
-          <li><a href="/home/setting"><i class="material-icons">settings</i></a></li><span class="line"></span>
-          <li><a href="/users/sign_out" data-method="delete">로그아웃</a></li>
-          <% else %>
-          <li><a href="/users/sign_in"  class="btn waves-effect waves-light red darken">로그인</a>
-          <!--a href="/users/sign_in" class="btn btn-main">SIGN IN</a--></li>
-          <li>
-            <a href="/users/sign_up" class="btn waves-effect waves-light red darken-1">회원가입</a>
-            <!--a href="/users/sign_up" class="btn btn-main">JOIN US</a--></li>
-          <% end %>
-        </ul>
-        
-      </div>
-    </nav>  
-   
-    <%= yield %>
-
-    <footer class="page-footer row">
-      <div class="col s12">
-        <%= image_tag "likelion", class: "footer-img" %>
-          <br>
-        <a class="grey-text text-darken-1">김선재 남예슬 안누리</a>
-      </div>
-    </footer>
-  </body>
->>>>>>> Before CRUD2
 </html>
 
