@@ -1,5 +1,18 @@
-<ul id="slide-out" class="side-nav fixed">
-  <li><a href="/home/myAim" class="active">목표! 자격증</a></li>
-  <li><a href="/home/myLicense" class="manage">자격증 관리</a></li>
+<ul id="nav-mobile" class="side-nav fixed">
+  <li><a href="/license/myAim">목표! 자격증</a></li>
+  <li><a href="/license/myLicense">자격증 관리</a></li>
 </ul>
 
+<script>
+  $(function() {
+    $('.button-collapse').sideNav(
+      {
+        menuWidth: 300, // Default is 240
+        edge: 'right', // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      }
+    );
+    
+    $('.button-collapse').sideNav('hide');
+  });
+</script>

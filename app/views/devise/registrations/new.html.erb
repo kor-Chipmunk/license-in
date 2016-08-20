@@ -1,4 +1,5 @@
 <div class = "container">
+<<<<<<< HEAD
 	<h2>Sign Up</h2>
 
 	<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -43,3 +44,49 @@
 <script>
 	$('select').material_select();
 </script>
+=======
+<h2>Sign Up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nickname %>
+    <%= f.text_field :nickname, maxlength: 20 %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :major %>
+    <%= f.collection_select(:major_id, @majors, :id, :name) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "회원가입 하기", :class => "btn-sign-up btn-large waves-effect waves-light red darken-1" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
+
+<script>
+    $('select').material_select();
+</script>
+>>>>>>> Before CRUD2
