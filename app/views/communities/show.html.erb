@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="community">
+    <p id="notice"><%= notice %></p>
+    
+    <p>
+      <h3><%= @community.title %></h3>
+    </p>
+    <hr>
+    <p>
+      <%= @community.content %>
+    </p>
+    
+    <%= link_to '수정', edit_community_path(@community),  class: "btn btn-community" %> |
+    <%= link_to '삭제', @community, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-community" %> |
+    <%= link_to '목록', communities_path,  class: "btn btn-community" %> 
+  </div>
+</div>
+

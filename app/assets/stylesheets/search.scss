@@ -1,25 +1,13 @@
 
 
 #searchMenu {
-    margin: 50px auto 0px auto;
-    width: 70%;
+    margin: 50px auto 30px auto;
+    width: 100%;
 }
-
-
-.btn-searchMenu {
-    border-style: solid;
-    border-color: #f44336;
-    border-width: thin;
-    border-radius: 10px;
-    background-color: white;
-    color: #f44336;
-    width: 100px;
-    padding: 0;
-}
-
 
 
 .searchBox {
+    height: 220px;
     margin: 0px auto;
     border-style: solid;
     border-color: gray;
@@ -31,12 +19,12 @@
 
 
 
-#searchKeyword {
+.searchKeyword {
     width: 70%;
     margin: 0 auto;
 }
 
-#searchAbc {
+.searchAbc {
     
 }
 

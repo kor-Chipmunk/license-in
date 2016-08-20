@@ -7,7 +7,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
 
   	  ## Customizing Fields
   	  t.string :nickname # , null: false, default: ""
-  	  t.string :major # , null: false, default: ""
+  	  t.integer :major_id
 
       ## Recoverable
       t.string   :reset_password_token
