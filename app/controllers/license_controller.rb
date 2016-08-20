@@ -4,12 +4,12 @@ class LicenseController < ApplicationController
     end
     
     def myAim
-      # @aimcontainer = current_user.aim_license_container
-       #@likecontainer = current_user.like_license_container
+		@aimcontainer = current_user.aim_license_container
+		@likecontainer = current_user.like_license_container
     end
     
     def myLicense
-        #@gotcontainer = current_user.got_license_container
+		@gotcontainer = current_user.got_license_container
     end
     
     def new
