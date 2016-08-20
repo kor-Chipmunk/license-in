@@ -14,9 +14,5 @@ class User < ApplicationRecord
   has_many :anony_comments
   has_many :book_posts
   has_many :book_comments
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> yeseul
 end
