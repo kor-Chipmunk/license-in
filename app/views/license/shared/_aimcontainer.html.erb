@@ -1,0 +1,24 @@
+<div class="aimContainer">
+	<h4 class="grey-text darken-1">목표 자격증</h4>
+	<hr>
+	<div class="row">
+		<%= render partial: 'license/shared/license', locals: { type: :aim, add: :true } %>
+		<% unless aimcontainer.licenses.nil? %>
+			<%= render partial: 'license/shared/license', collection: aimcontainer.licenses, locals: { type: :aim, add: :false } %>
+		<% end %>
+	</div>
+</div>
+
+<div id="addAim" class="modal">
+	<%= form_tag({ controller: :license, action: :create }) do %>
+		<div class="modal-content">
+			자격증 목록 선택
+			<%= hidden_field_tag :type, '1' %>
+			<%= select_tag('id', options_from_collection_for_select(licenses, :id, :name)) %>
+		</div>
+		<div class="modal-footer">
+			<%= submit_tag '자격증 추가', data: { disable_with: '추가중...' } %>
+			<%= button_tag '취소', id: "canceladdAim" %>
+		</div>
+	<% end %>
+</div>

@@ -8,6 +8,7 @@ class CreateGotLicenses < ActiveRecord::Migration[5.0]
       t.date :issuedate
       t.string :etc
       t.integer :got_license_container_id
+      t.integer :license_id
       t.timestamps
     end
   end

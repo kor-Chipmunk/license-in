@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160819174251) do
+ActiveRecord::Schema.define(version: 20160820084819) do
 
   create_table "aim_license_containers", force: :cascade do |t|
     t.integer  "user_id"
@@ -51,6 +51,27 @@ ActiveRecord::Schema.define(version: 20160819174251) do
     t.string   "avatar"
   end
 
+  create_table "bridge_aim_container_and_licenses", force: :cascade do |t|
+    t.integer  "aim_license_container_id"
+    t.integer  "license_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "bridge_got_container_and_licenses", force: :cascade do |t|
+    t.integer  "got_license_container_id"
+    t.integer  "license_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "bridge_like_container_and_licenses", force: :cascade do |t|
+    t.integer  "like_license_container_id"
+    t.integer  "license_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "bridge_major_and_licenses", force: :cascade do |t|
     t.integer  "license_id"
     t.integer  "major_id"
@@ -79,6 +100,7 @@ ActiveRecord::Schema.define(version: 20160819174251) do
     t.date     "issuedate"
     t.string   "etc"
     t.integer  "got_license_container_id"
+    t.integer  "license_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

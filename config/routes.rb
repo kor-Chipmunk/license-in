@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 	match ":controller(/:action(/:id))", :via => [:post, :get]
 
 	post "/license/create/" => "license#create"
-
+	post "/license/:type/:id" => "license#update"
+	delete "/license/:type/:id" => "license#destroy"
 end
 

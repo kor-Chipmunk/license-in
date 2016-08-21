@@ -24,6 +24,13 @@
     
     &:first-child { margin-top: 30px; }
     
+    .delete {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
     .btn-aim-card {
         margin: 0 auto;
         width: 74px !important;

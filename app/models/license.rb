@@ -1,6 +1,9 @@
 class License < ApplicationRecord
-	belongs_to :aim_license_container
-	belongs_to :like_license_container
+	has_many :bridge_aim_container_and_licenses
+	has_many :aim_license_containers, through: :bridge_aim_container_and_licenses
+
+	has_many :bridge_like_container_and_licenses
+	has_many :like_license_containers, through: :bridge_like_container_and_licenses
 
 	has_many :test_schedules
 	
