@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 	post "/license/create/" => "license#create"
 	post "/license/:type/:id" => "license#update"
 	delete "/license/:type/:id" => "license#destroy"
-end
 
+	# get "/license/:id" => "license#show"
+end

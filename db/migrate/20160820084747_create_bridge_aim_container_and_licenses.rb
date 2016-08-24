@@ -4,6 +4,9 @@ class CreateBridgeAimContainerAndLicenses < ActiveRecord::Migration[5.0]
       t.integer :aim_license_container_id
       t.integer :license_id
 
+      t.date :testdate
+      t.string :testplace
+
       t.timestamps
     end
   end

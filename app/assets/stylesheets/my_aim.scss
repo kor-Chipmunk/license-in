@@ -27,8 +27,15 @@
     .delete {
         cursor: pointer;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 5px;
+        top: 5px;
+    }
+
+    .edit {
+        cursor: pointer;
+        position: absolute;
+        right: 30px;
+        top: 5px;
     }
 
     .btn-aim-card {

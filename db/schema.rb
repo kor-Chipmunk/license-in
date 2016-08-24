@@ -54,13 +54,15 @@ ActiveRecord::Schema.define(version: 20160820084819) do
   create_table "bridge_aim_container_and_licenses", force: :cascade do |t|
     t.integer  "aim_license_container_id"
     t.integer  "license_id"
+    t.date     "testdate"
+    t.string   "testplace"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
 
   create_table "bridge_got_container_and_licenses", force: :cascade do |t|
     t.integer  "got_license_container_id"
-    t.integer  "license_id"
+    t.integer  "got_license_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

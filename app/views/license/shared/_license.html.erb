@@ -13,6 +13,7 @@
 		<div class="col s3">
 			<div class="aim-card card blue-grey darken-1 valign-wrapper">
 				<a class="delete" href="/license/1/<%= license.id %>" data-method="delete" data-confirm="제거해도 괜찮습니까?"><i class="material-icons">delete</i></a>
+				<a class="edit modal-trigger" href="#editAdd"><i class="material-icons">mode_edit</i></a>
 				<div class="card-content white-text center-align valign">
 					<span class="card-title">
 						<span class="license-name">
@@ -21,7 +22,28 @@
 						&nbsp;시험까지
 					</span>
 					<p>
-					<span class="d-day">50</span>일 남았습니다!
+					<% userlicense = aimcontainer.bridge_aim_container_and_licenses.find_by_license_id(license.id) %>
+					<% dDay = (userlicense.testdate - Date.today).to_i %>
+					<% unless userlicense.testdate.nil? %>
+						<% if dDay > 0 %>
+							<span class="d-day">
+								<%= d-day %>
+							</span>일 남았습니다!
+						<% elsif dDay == 0 %>
+							<span class="d-day-today">
+								오늘 시험일 입니다!
+							</span>
+						<% else %>
+							<span class="d-day-end">
+								시험이 끝났습니다!<br>
+								합격 하셨으면, 획득 자격증으로 이동해 주세요!
+							</span>
+						<% end %>
+					<% end %>
+
+					<% unless userlicense.testplace.nil? %>
+
+					<% end %>
 					</p>
 				</div>
 			</div>
@@ -39,11 +61,10 @@
 	<% else %>
 		<div class="col s3">
 			<div class="aim-card card blue-grey darken-1 valign-wrapper">
+				<a class="delete" href="/license/1/<%= license.id %>" data-method="delete" data-confirm="제거해도 괜찮습니까?"><i class="material-icons">delete</i></a>
+				<a class="edit modal-trigger" href="#editLike"><i class="material-icons">mode_edit</i></a>
 				<div class="card-content white-text center-align valign">
-					<span class="card-title"><span class="license-name">전기 기사</span> 시험까지</span>
-					<p>
-					<span class="d-day">50</span>일 남았습니다!
-					</p>
+					<span class="card-title"><span class="license-name"><%= license.name %></span>
 				</div>
 			</div>
 		</div>
