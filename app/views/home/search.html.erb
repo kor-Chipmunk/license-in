@@ -8,50 +8,61 @@
           </ul>
         </div>
     </div>
+    
+    <!----- 키워드 검색 ----->
     <div class="row">
-        <div class="searchBox">
-        <!----- 키워드 검색 ----->
-        <div id="search1" class="searchKeyword">
-            <form>
-                <div class="input-field">
-                  <input id="search" type="search" placeholder="자격증 관련 키워드를 입력해주세요" required>
-                  <label for="search"><i class="material-icons">search</i></label>
-                  <i class="material-icons">close</i>
-                  <button type="submit" class="btn btn-search waves-effect waves-light">검색</button>
-                 </div>
-            </form>
-        </div>
-        
-        <!----- 초성 검색 ----->
-        <div id="search2" class="searchAbc">
-            <div class="indexBox" style="margin-top:-20px">
-                <ul>
-                    <li><a href="#" class="indexBox__mini">ㄱ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㄴ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㄷ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㄹ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㅁ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㅂ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㅅ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㅇ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㅈ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㅊ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㅋ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㅌ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㅍ</a></li>
-                    <li><a href="#" class="indexBox__mini">ㅎ</a></li>
-                </ul><br>
-            </div>
-        </div>
-        
+      <div class="searchBox">
+      <div id="search1" class="searchKeyword">
+          <form acrtion="/home/search" method="POST">
+            <input id="search" type="text" name="search" placeholder="자격증 관련 키워드를 입력해주세요" required>
+            <label for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+            <button type="submit" class="btn btn-search waves-effect waves-light">검색</button>                
+          </form>
+      </div>
+      <!----- 초성 검색 ----->
+      <div id="search2" class="searchAbc">
+          <div class="indexBox" style="margin-top:-20px">
+              <ul>
+                  <li><a href="#" class="indexBox__mini">ㄱ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㄴ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㄷ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㄹ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㅁ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㅂ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㅅ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㅇ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㅈ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㅊ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㅋ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㅌ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㅍ</a></li>
+                  <li><a href="#" class="indexBox__mini">ㅎ</a></li>
+              </ul><br>
+          </div>
+      </div>
+      
         <div id="search3" class="searchMajor">
           <div class="field">
           </div>
         </div>
     </div> <!--- searchBox --->   
   </div> <!--- row --->
-    <%= render 'home/searchResult' %>
+  <!---- 검색 결과 ----->
+  <div class="row">
+    <div class="searchResult">
+      <% @searchResult.each do |license| %>
+      <h4><a href="/license/show/<%= license.id %>"><%= license.name %></a></h4>
+      <hr>
+      <% end %>
+    </div>    
+  </div>
 </div><!--- container --->
+
+
+
+
+
 
 
 <script type="text/javascript">

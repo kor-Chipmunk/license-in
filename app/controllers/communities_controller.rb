@@ -4,7 +4,8 @@ class CommunitiesController < ApplicationController
   # GET /communities
   # GET /communities.json
   def index
-    @communities = Community.all.order("id desc")
+    #Community.increment_counter(:hits)
+    @communities = Community.all.paginate(:page => params[:page], per_page: 10).order("id desc")
   end
 
   # GET /communities/1
@@ -25,10 +26,12 @@ class CommunitiesController < ApplicationController
   # POST /communities.json
   def create
     @community = Community.new(community_params)
+    
+    
 
     respond_to do |format|
       if @community.save
-        format.html { redirect_to @community, notice: 'Community was successfully created.' }
+        format.html { redirect_to @community, notice: '글을 성공적으로 작성하였습니다' }
         format.json { render :show, status: :created, location: @community }
       else
         format.html { render :new }
@@ -42,7 +45,7 @@ class CommunitiesController < ApplicationController
   def update
     respond_to do |format|
       if @community.update(community_params)
-        format.html { redirect_to @community, notice: 'Community was successfully updated.' }
+        format.html { redirect_to @community, notice: '글이 수정되었습니다' }
         format.json { render :show, status: :ok, location: @community }
       else
         format.html { render :edit }
@@ -56,7 +59,7 @@ class CommunitiesController < ApplicationController
   def destroy
     @community.destroy
     respond_to do |format|
-      format.html { redirect_to communities_url, notice: 'Community was successfully destroyed.' }
+      format.html { redirect_to communities_url, notice: '글이 삭제되었습니다' }
       format.json { head :no_content }
     end
   end
@@ -71,4 +74,5 @@ class CommunitiesController < ApplicationController
     def community_params
       params.require(:community).permit(:title, :content)
     end
+    
 end

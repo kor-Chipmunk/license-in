@@ -12,7 +12,12 @@ class HomeController < ApplicationController
   end
  
   def search
-    
+    @searchResult = License.all
+    if params[:search]
+        @searchResult = License.search(params[:search]).order("created_at DESC")
+    else
+        @searchResult = License.all.order('created_at DESC')
+    end
   end
 
   def calendar

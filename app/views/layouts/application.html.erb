@@ -15,40 +15,80 @@
   </head>
 
   <body>
-    
-    <nav role="navigation">
-      <div class="nav-wrapper white">
-        <a href="/" class="navbar-brand"><img class="img-responsive center" src="/assets/logo.png"></a>
-        <ul id="nav-mobile" class="right">
-          <li><a href="/license/myAim" class="active">나의자격증</a></li>
-          <li><a href="/home/search">검색</a></li>
-          <li><a href="/communities">커뮤니티</a></li>
-          <li><a href="/home/book">중고거래</a></li>
-          <li><a href="/home/calendar">달력</a></li>
+    <div class="navbar fixed">
+      <nav role="navigation">
+        <div class="container nav-wrapper white">
+          <a href="/" class="navbar-brand"><img class="img-responsive center" src="/assets/logo.png"></a>
+          <ul id="nav-mobile" class="right">
+            <li><a href="/license/myAim" class="active">나의자격증</a></li>
+            <li><a href="/home/search">검색</a></li>
+            <li><a href="/communities">커뮤니티</a></li>
+            <li><a href="/books">중고거래</a></li>
+            <li><a href="/home/calendar">달력</a></li>
+            <% if user_signed_in? %>
+            <li class="setting-name"><a href="#"><%= current_user.nickname %> 님</a></li>
+            <!--<li></li>-->
+            <!--li><a href="/home/setting"><i class="material-icons">settings</i></a></li><span class="line"></span-->
+            <% else %>
+            <li><a href="/users/sign_in"  class="btn btn-nav waves-effect waves-light red darken">로그인</a>
+            <!--a href="/users/sign_in" class="btn btn-main">SIGN IN</a--></li>
+            <li>
+              <a href="/users/sign_up" class="btn btn-nav waves-effect waves-light red darken-1">회원가입</a>
+              <!--a href="/users/sign_up" class="btn btn-main">JOIN US</a--></li>
+            <% end %>
+          </ul>
           <% if user_signed_in? %>
-          <li><%= current_user.email %></li>
-          <li><a href="/home/setting"><i class="material-icons">settings</i></a></li><span class="line"></span>
-          <li><a href="/users/sign_out" data-method="delete">로그아웃</a></li>
-          <% else %>
-          <li><a href="/users/sign_in"  class="btn waves-effect waves-light red darken">로그인</a>
-          <!--a href="/users/sign_in" class="btn btn-main">SIGN IN</a--></li>
-          <li>
-            <a href="/users/sign_up" class="btn waves-effect waves-light red darken-1">회원가입</a>
-            <!--a href="/users/sign_up" class="btn btn-main">JOIN US</a--></li>
+          <div class="setting-menu-container">
+            <ul>
+              <li class="setting-email"><%= current_user.email %></li><br>
+              <li class="setting-my"><a href="/users/edit">내 계정</a></li>
+              <li><a href="/users/sign_out" data-method="delete">로그아웃</a></li>
+            </ul>
+          </div>
           <% end %>
-        </ul>
-        
-      </div>
-    </nav>  
-   
-    <%= yield %>
+        </div>
+      </nav>      
+    </div>
 
-    <footer class="page-footer row">
-      <div class="col s12">
-        <%= image_tag "likelion", class: "footer-img" %>
-          <br>
-        <a class="grey-text text-darken-1">김선재 남예슬 안누리</a>
+    <%= yield %>
+    
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">쯩인에 의견 보내기</h5>
+            <p class="grey-text text-lighten-4">쯩인에 다양한 의견을 보내주세요. 후원도 해주세요.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">쯩인을 만든 사람</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">김선재</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">남예슬</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">안누리</a></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <!--div class="footer-copyright">
+        <div class="container">
+        © 2014 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div-->
     </footer>
   </body>
 </html>
+
+
+            
+            
+<!--유저세팅-->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.setting-name').click(function(e) {
+      $('.setting-menu-container').slideToggle();
+      return false;
+    });
+  });
+        
+</script>

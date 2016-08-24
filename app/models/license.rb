@@ -6,4 +6,8 @@ class License < ApplicationRecord
 	
 	has_many :bridge_major_and_licenses
 	has_many :majors, through: :bridge_major_and_licenses
+	
+	def self.search(search)
+		where("name LIKE ?", "%#{search}%")
+	end
 end

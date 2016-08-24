@@ -4,12 +4,12 @@
 
 
 .community {
-    margin: 0px auto;
+    margin: 100px auto;
     border-style: solid;
     border-color: gray;
     border-width: thin;
     background-color: white;
-    
+    font-size: 12px;
     padding: 50px 10px;
 }
 
@@ -97,4 +97,8 @@ div {
 
 label {
   display: block;
+}
+
+.pagination {
+  margin-top: 30px;
 }

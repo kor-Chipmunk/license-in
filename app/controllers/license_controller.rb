@@ -2,7 +2,7 @@ class LicenseController < ApplicationController
     def index
         redirect_to default_page
     end
-    
+
     def myAim
       # @aimcontainer = current_user.aim_license_container
        #@likecontainer = current_user.like_license_container
@@ -10,6 +10,11 @@ class LicenseController < ApplicationController
     
     def myLicense
         #@gotcontainer = current_user.got_license_container
+    end
+    
+    def show
+        @showLicense = License.find(params[:id])
+        
     end
     
     def new

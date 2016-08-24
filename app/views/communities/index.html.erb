@@ -4,8 +4,8 @@
     <table class="centered bordered">
       <thead>
         <tr>
+          <th>번호</th>
           <th>제목</th>
-          <th>작성자</th>
           <th>날짜</th>
           <th>조회수</th>
           <th colspan="3"></th>
@@ -15,18 +15,49 @@
       <tbody>
         <% @communities.each do |community| %>
           <tr>
+            <td><%= community.id %></td>
             <td><strong><a href="communities/<%=community.id %>"><%= community.title %></a></strong></td>
-            <td>작성자</td>
-            <td>2016.0.0</td>
-            <td>3</td>
+            <td><%= community.created_at.strftime("%Y-%m-%d") %></td>
+            <td></td>
           </tr>
         <% end %>
       </tbody>
     </table>
+    
+    <!---- 페이지네이션 ----->
+    <div class="row center">
+      <!--ul id="pagination-community" class="pagination center">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="/communities?page=1">1</a></li>
+        <li class="waves-effect"><a href="/communities?page=2">2</a></li>
+        <li class="waves-effect"><a href="/communities?page=3">3</a></li>
+        <li class="waves-effect"><a href="/communities?page=4">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul-->
+      <!--- ↑ metarialize --->
+      <%= will_paginate @communities %>
+    </div>
     <br>
-    <%= link_to '글쓰기', new_community_path, class: "btn btn-community" %>  
+    <%= link_to '글쓰기', new_community_path, class: "btn btn-community right" %>  
   </div>
 </div>
 
 
- <!----<td> < % =   link_to 'Show', community %></td> --->
+    
+    
+<!----script type="text/javascript">
+     
+  $(document).ready(function(){
+    $('#pagination-community').pagination({
+        dataSource: [1, 2, 3, 4, 5, 6, 7, ... , 35],
+        pageSize: 5,
+        pageNumber: 3,
+        callback: function(data, pagination) {
+            // template method of yourself
+            var html = template(data);
+            dataContainer.html(html);
+        }
+    })
+    });
+</script--->

@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+(function($) {
+    $.fn.hasScrollBar = function() {
+        return this.get(0).scrollHeight > this.height();
+    }
+})(jQuery);
+
+$(document).ready(function(){
+    if ($('body').hasScrollBar() === true) {
+        $('footer').css('bottom', '0');
+    }
+  });
