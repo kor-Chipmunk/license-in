@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :major
+  has_one :major
 
   has_one :aim_license_container
   has_one :like_license_container

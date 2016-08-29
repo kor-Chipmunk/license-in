@@ -13,7 +13,7 @@
 		<div class="col s3">
 			<div class="aim-card card blue-grey darken-1 valign-wrapper">
 				<a class="delete" href="/license/1/<%= license.id %>" data-method="delete" data-confirm="제거해도 괜찮습니까?"><i class="material-icons">delete</i></a>
-				<a class="edit modal-trigger" href="#editAdd"><i class="material-icons">mode_edit</i></a>
+				<a class="edit modal-trigger" href="#editAim" data-name="<%= license.name %>" data-id="<%= license.id %>" data-type="1"><i class="material-icons">mode_edit</i></a>
 				<div class="card-content white-text center-align valign">
 					<span class="card-title">
 						<span class="license-name">
@@ -23,26 +23,36 @@
 					</span>
 					<p>
 					<% userlicense = aimcontainer.bridge_aim_container_and_licenses.find_by_license_id(license.id) %>
-					<% dDay = (userlicense.testdate - Date.today).to_i %>
+					
+					<input type="hidden" class="testdate" value="<%= userlicense.testdate %>">
+					<input type="hidden" class="testplace" value="<%= userlicense.testplace %>">
+
 					<% unless userlicense.testdate.nil? %>
+						<% dDay = (userlicense.testdate - Date.today).to_i %>
 						<% if dDay > 0 %>
 							<span class="d-day">
-								<%= d-day %>
+								<%= dDay %>
 							</span>일 남았습니다!
 						<% elsif dDay == 0 %>
 							<span class="d-day-today">
 								오늘 시험일 입니다!
 							</span>
 						<% else %>
-							<span class="d-day-end">
+							<span class="d-day-end" style="font-size: 1em;">
 								시험이 끝났습니다!<br>
-								합격 하셨으면, 획득 자격증으로 이동해 주세요!
+								<span class="success-message" style="font-size: 0.7em;">
+									합격 하셨으면, 획득 자격증으로 이동해 주세요!
+								</span>
 							</span>
 						<% end %>
 					<% end %>
+					<br />
+					<br />
 
-					<% unless userlicense.testplace.nil? %>
-
+					<% unless userlicense.testplace.nil? or userlicense.testplace == "" %>
+						<p class="place">
+							시험 장소 : <%= userlicense.testplace %>
+						</p>
 					<% end %>
 					</p>
 				</div>
@@ -61,10 +71,10 @@
 	<% else %>
 		<div class="col s3">
 			<div class="aim-card card blue-grey darken-1 valign-wrapper">
-				<a class="delete" href="/license/1/<%= license.id %>" data-method="delete" data-confirm="제거해도 괜찮습니까?"><i class="material-icons">delete</i></a>
-				<a class="edit modal-trigger" href="#editLike"><i class="material-icons">mode_edit</i></a>
+				<a class="delete" href="/license/2/<%= license.id %>" data-method="delete" data-confirm="제거해도 괜찮습니까?"><i class="material-icons">delete</i></a>
+				<a class="edit modal-trigger" href="#editLike" data-name="<%= license.name %>" data-id="<%= license.id %>" data-type="2"><i class="material-icons">mode_edit</i></a>
 				<div class="card-content white-text center-align valign">
-					<span class="card-title"><span class="license-name"><%= license.name %></span>
+					<span class="card-title"><span class="license-name"><%= license.name %></span></span>
 				</div>
 			</div>
 		</div>
@@ -80,12 +90,21 @@
 		</div>
 	<% else %>
 		<div class="col s3">
-			<div class="aim-card card blue-grey darken-1 valign-wrapper">
+			<div class="aim-card card blue-grey darken-1 valign-wrapper", style="cursor: pointer;">
 				<div class="card-content white-text center-align valign">
-					<span class="card-title"><span class="license-name">전기 기사</span> 시험까지</span>
-					<p>
-					<span class="d-day">50</span>일 남았습니다!
-					</p>
+					<a class="delete" href="/license/3/<%= license.id %>" data-method="delete" data-confirm="제거해도 괜찮습니까?"><i class="material-icons">delete</i></a>
+					<a class="edit modal-trigger" href="#editGot" data-name="<%= license.name %>" data-id="<%= license.id %>" data-type="3"><i class="material-icons">mode_edit</i></a>
+					
+					<% userlicense = gotcontainer.bridge_got_container_and_licenses.find_by_license_id(license.id) %>
+
+					<input type="hidden" class="qualifyitem" value="<%= userlicense.qualifyitem %>">
+					<input type="hidden" class="enrollnum" value="<%= userlicense.enrollnum %>">
+					<input type="hidden" class="grade" value="<%= userlicense.grade %>">
+					<input type="hidden" class="enrolldate" value="<%= userlicense.enrolldate %>">
+					<input type="hidden" class="issuedate" value="<%= userlicense.issuedate %>">
+					<input type="hidden" class="etc" value="<%= userlicense.etc %>">
+
+					<span class="card-title"><span class="license-name"><%= license.name %></span></span>
 				</div>
 			</div>
 		</div>

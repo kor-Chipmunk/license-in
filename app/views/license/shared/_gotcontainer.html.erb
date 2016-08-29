@@ -2,22 +2,87 @@
 	<h4 class="grey-text darken-1">자격증 이력</h4>
 	<hr>
 	<div class="row">
-		<div class="col s3">
-			<div class="aim-card card-panel center-align valign-wrapper">
-				<a class="btn-aim-card btn-floating waves-effect waves-light valign transparent modal-trigger" href="#addAim">
-					<i class="aim-icon material-icons">add</i>    
-				</a>
-			</div>
-		</div>
-		<div class="col s3">
-			<div class="aim-card card blue-grey darken-1 valign-wrapper">
-				<div class="card-content white-text center-align valign">
-					<span class="card-title"><span class="license-name">전기 기사</span> 시험까지</span>
-					<p>
-					<span class="d-day">50</span>일 남았습니다!
-					</p>
-				</div>
-			</div>
-		</div>
+		<%= render partial: 'license/shared/license', locals: { type: :got, add: :true } %>
+		<% unless gotcontainer.licenses.nil? %>
+			<%= render partial: 'license/shared/license', collection: gotcontainer.licenses, locals: { type: :got, add: :false, 
+			gotcontainer: gotcontainer } %>
+		<% end %>
 	</div>
+</div>
+
+<div id="addGot" class="modal modal-fixed-footer" style="height: 50%;">
+	<%= form_tag({ controller: :license, action: :create }) do %>
+		<div class="modal-content">
+			<%= hidden_field_tag :type, '3' %>
+			<h4>자격증 이력 추가</h4>
+			<p>< 자격증 목록 ></p>
+			<%= select_tag('id', options_from_collection_for_select(licenses, :id, :name)) %>
+			<p>< 자격종목 ></p>
+			<%= text_field_tag :qualifyitem %>
+			<p>< 등록번호 ></p>
+			<%= text_field_tag :enrollnum %>
+			<p>< 등급 ></p>
+			<%= text_field_tag :grade %>
+			<p>< 등록일 ></p>
+			<%= date_field_tag :enrolldate %>
+			<p>< 발급일 ></p>
+			<%= date_field_tag :issuedate %>
+			<p>< 기타 ></p>
+			<%= text_field_tag :etc %>
+		</div>
+		<div class="modal-footer">
+			<%= submit_tag '자격증 이력 추가', data: { disable_with: '추가중...' }, class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+			<%= button_tag '취소', type: 'button', id: "canceladdGot", class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+		</div>
+	<% end %>
+</div>
+
+<div id="showGot" class="modal modal-fixed-footer" style="height: 50%;">
+	<div class="modal-content">
+		<p>< 자격증 목록 ></p>
+		<%= select_tag('id', options_from_collection_for_select(licenses, :id, :name)) %>
+		<p>< 자격종목 ></p>
+		<%= text_field_tag :qualifyitem, readonly: 'readonly' %>
+		<p>< 등록번호 ></p>
+		<%= text_field_tag :enrollnum, readonly: 'readonly' %>
+		<p>< 등급 ></p>
+		<%= text_field_tag :grade, readonly: 'readonly' %>
+		<p>< 등록일 ></p>
+		<%= date_field_tag :enrolldate, readonly: 'readonly' %>
+		<p>< 발급일 ></p>
+		<%= date_field_tag :issuedate, readonly: 'readonly' %>
+		<p>< 기타 ></p>
+		<%= text_field_tag :etc, readonly: 'readonly' %>
+	</div>
+	<div class="modal-footer">
+		<%= button_tag '취소', type: 'button', id: "cancelshowGot", class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+	</div>
+</div>
+
+<div id="editGot" class="modal modal-fixed-footer" style="height: 50%;">
+	<%= form_tag({ controller: :license, action: :update }) do %>
+		<div class="modal-content">
+			<%= hidden_field_tag :type, '3' %>
+			<%= hidden_field_tag :before_id, '' %>
+			<h4>자격증 이력 편집</h4>
+			<p>< 자격증 목록 ></p>
+			<%= select_tag 'id', options_from_collection_for_select(licenses, :id, :name) %>
+			<p>< 자격종목 ></p>
+			<%= text_field_tag :qualifyitem %>
+			<p>< 등록번호 ></p>
+			<%= text_field_tag :enrollnum %>
+			<p>< 등급 ></p>
+			<%= text_field_tag :grade %>
+			<p>< 등록일 ></p>
+			<%= date_field_tag :enrolldate %>
+			<p>< 발급일 ></p>
+			<%= date_field_tag :issuedate %>
+			<p>< 기타 ></p>
+			<%= text_field_tag :etc %>
+		</div>
+		<div class="modal-footer">
+			<%= submit_tag '관심 자격증 수정', data: { disable_with: '수정중...' }, class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+			<%= button_tag '취소', type: 'button', id: "canceleditGot", class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+		</div>
+	<% end %>
 </div>

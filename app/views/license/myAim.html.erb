@@ -16,6 +16,52 @@
 			$('#addAim').closeModal();
 		});
 
+		$('a.edit').click(function() {
+			license_name = $(this).data('name');
+			license_id = $(this).data('id');
+			type = $(this).data('type');
+
+			if (type == "1") {
+				$('#editAim').openModal();
+			
+				$('#editAim input#before_id').val(license_id);
+
+				testdate = $(this).parent().find('input.testdate');
+				testplace = $(this).parent().find('input.testplace');
+
+				$('#editAim select option').filter(function() {
+					return $(this).val() == license_id;
+				}).prop('selected', 'selected');
+
+				$('#editAim input.select-dropdown').val(license_name);
+
+				$('#editAim input#testdate').val(testdate.val().replace(/\//g, '-'));
+				$('#editAim input#testplace').val(testplace.val());
+			}
+			else if (type == "2") {
+				$('#editLike').openModal();
+				$('#editLike input#before_id').val(license_id);
+
+				$('#editLike select option').filter(function() {
+					return $(this).val() == license_id;
+				}).prop('selected', 'selected');
+
+				$('#editLike input.select-dropdown').val(license_name);
+			}
+		});
+
+		$('#canceleditAim').click(function() {
+			$('#editAim').closeModal();
+		});
+
+		$('#canceladdLike').click(function() {
+			$('#addLike').closeModal();
+		});
+
+		$('#canceleditLike').click(function() {
+			$('#editLike').closeModal();
+		});
+
 		$('select').material_select();
 	});
 

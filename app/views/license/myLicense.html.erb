@@ -1,4 +1,87 @@
 <%= render "license/shared/sidebar" %>
-<div class="license">    
-	<%= render "license/shared/gotcontainer" %>
+
+<div class="license">
+	<%= render "license/shared/gotcontainer", gotcontainer: @gotcontainer, licenses: @licenses %>
 </div>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$('.modal-trigger').leanModal();
+
+		$('#canceladdGot').click(function() {
+			$('#addGot').closeModal();
+		});
+
+		$('a.edit').click(function() {
+			license_name = $(this).data('name');
+			license_id = $(this).data('id');
+			type = $(this).data('type');
+
+			$('#editGot').openModal();
+		
+			$('#editGot input#before_id').val(license_id);
+
+			qualifyitem = $(this).parent().find('input.qualifyitem');
+			enrollnum = $(this).parent().find('input.enrollnum');
+			grade = $(this).parent().find('input.grade');
+			enrolldate = $(this).parent().find('input.enrolldate');
+			issuedate = $(this).parent().find('input.issuedate');
+			etc = $(this).parent().find('input.etc');
+
+			$('#editGot select option').filter(function() {
+				return $(this).val() == license_id;
+			}).prop('selected', 'selected');
+
+			$('#editGot input.select-dropdown').val(license_name);
+
+			$('#editGot input#qualifyitem').val(qualifyitem.val());
+			$('#editGot input#enrollnum').val(enrollnum.val());
+			$('#editGot input#grade').val(grade.val());
+			$('#editGot input#etc').val(etc.val());
+
+			$('#editGot input#enrolldate').val(enrolldate.val().replace(/\//g, '-'));
+			$('#editGot input#issuedate').val(issuedate.val().replace(/\//g, '-'));
+		});
+
+		$('#canceleditGot').click(function() {
+			$('#editAim').closeModal();
+		});
+
+
+		$('select').material_select();
+
+		$('.aim-card').click(function() {
+			license_name = $(this).find('a.edit').data('name');
+			license_id = $(this).find('a.edit').data('id');
+
+			qualifyitem = $(this).find('input.qualifyitem');
+			enrollnum = $(this).find('input.enrollnum');
+			grade = $(this).find('input.grade');
+			enrolldate = $(this).find('input.enrolldate');
+			issuedate = $(this).find('input.issuedate');
+			etc = $(this).find('input.etc');
+
+			$('#showGot select option').filter(function() {
+				return $(this).val() == license_id;
+			}).prop('selected', 'selected');
+
+			$('#showGot input.select-dropdown').val(license_name);
+
+			$('#showGot input#qualifyitem').val(qualifyitem.val());
+			$('#showGot input#enrollnum').val(enrollnum.val());
+			$('#showGot input#grade').val(grade.val());
+			$('#showGot input#etc').val(etc.val());
+
+			$('#showGot input#enrolldate').val(enrolldate.val().replace(/\//g, '-'));
+			$('#showGot input#issuedate').val(issuedate.val().replace(/\//g, '-'));
+
+			$('#showGot').openModal();
+		});
+
+		$('#cancelshowGot').click(function() {
+			$('#showGot').closeModal();
+		})
+	});
+
+</script>

@@ -28,7 +28,7 @@
 				<li><a href="/home/calendar">달력</a></li>
 				<% if user_signed_in? %>
 					<li><%= current_user.email %></li>
-					<li><a href="/home/setting"><i class="material-icons">settings</i></a></li><span class="line"></span>
+					<li><a href="/users/edit"><i class="material-icons">settings</i></a></li><span class="line"></span>
 					<li><a href="/users/sign_out" data-method="delete">로그아웃</a></li>
 				<% else %>
 					<li><a href="/users/sign_in"  class="btn waves-effect waves-light red darken">로그인</a>

@@ -10,13 +10,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
+    @majors = Major.select("id, name").distinct.order(name: :asc)
     super
 
     # 목표, 관심, 획득 컨테이너 생성
     # logger.debug "params[:email] : #{params[:user][:email]}"
     registrated_user = User.find_by_email(params[:user][:email])
     # logger.debug "registrated_user id = #{registrated_user.id}"
-    
+
     aimlicensecontainer = AimLicenseContainer.new
     aimlicensecontainer.user = registrated_user
     if aimlicensecontainer.save
@@ -27,6 +28,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     likelicensecontainer.user = registrated_user
     if likelicensecontainer.save
       # logger.debug "LikeLicenseContainer 저장 성공!"
+      licenses = params[:user][:licenses]
+      licenses.each { |id| likelicensecontainer.licenses << License.find(id) }
     end
     
     gotlicensecontainer = GotLicenseContainer.new
@@ -37,9 +40,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+    @majors = Major.select("id, name").distinct.order(name: :asc)
+    super
+  end
 
   # PUT /resource
   # def update
@@ -47,9 +51,20 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+    destroied_user = current_user
+
+    aimlicensecontainer = destroied_user.aim_license_container
+    aimlicensecontainer.destroy
+
+    likelicensecontainer = destroied_user.like_license_container
+    likelicensecontainer.destroy
+
+    gotlicensecontainer = destroied_user.got_license_container
+    gotlicensecontainer.destroy
+
+    super
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign

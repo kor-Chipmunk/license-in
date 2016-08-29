@@ -4,22 +4,39 @@
 	<div class="row">
 		<%= render partial: 'license/shared/license', locals: { type: :like, add: :true } %>
 		<% unless likecontainer.licenses.nil? %>
-			<%= render partial: 'license/shared/license', collection: likecontainer.licenses, locals: { type: :like, add: :false } %>
+			<%= render partial: 'license/shared/license', collection: likecontainer.licenses, locals: { type: :like, add: :false,
+			likecontainer: likecontainer } %>
 		<% end %>
 	</div>
 </div>
 
-<div id="addLike" class="modal">
+<div id="addLike" class="modal modal-fixed-footer" style="height: 50%;">
 	<%= form_tag({ controller: :license, action: :create }) do %>
 		<div class="modal-content">
 			<%= hidden_field_tag :type, '2' %>
 			<h4>관심 자격증 추가</h4>
-			<p>자격증 목록 : </p>
+			<p>< 자격증 목록 ></p>
 			<%= select_tag('id', options_from_collection_for_select(licenses, :id, :name)) %>
 		</div>
 		<div class="modal-footer">
-			<%= submit_tag '자격증 추가', data: { disable_with: '추가중...' }, class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
-			<%= button_tag '취소', id: "canceladdAim", class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+			<%= submit_tag '관심 자격증 추가', data: { disable_with: '추가중...' }, class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+			<%= button_tag '취소', type: 'button', id: "canceladdLike", class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+		</div>
+	<% end %>
+</div>
+
+<div id="editLike" class="modal modal-fixed-footer" style="height: 50%;">
+	<%= form_tag({ controller: :license, action: :update }) do %>
+		<div class="modal-content">
+			<%= hidden_field_tag :type, '2' %>
+			<%= hidden_field_tag :before_id, '' %>
+			<h4>관심 자격증 편집</h4>
+			<p>< 자격증 목록 ></p>
+			<%= select_tag 'id', options_from_collection_for_select(licenses, :id, :name) %>
+		</div>
+		<div class="modal-footer">
+			<%= submit_tag '관심 자격증 수정', data: { disable_with: '수정중...' }, class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+			<%= button_tag '취소', type: 'button', id: "canceleditLike", class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
 		</div>
 	<% end %>
 </div>

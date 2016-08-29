@@ -28,3 +28,23 @@
 		</div>
 	<% end %>
 </div>
+
+<div id="editAim" class="modal modal-fixed-footer" style="height: 50%;">
+	<%= form_tag({ controller: :license, action: :update }) do %>
+		<div class="modal-content">
+			<%= hidden_field_tag :type, '1' %>
+			<%= hidden_field_tag :before_id, '' %>
+			<h4>목표 자격증 편집</h4>
+			<p>< 자격증 목록 ></p>
+			<%= select_tag 'id', options_from_collection_for_select(licenses, :id, :name) %>
+			<p>< 시험 날짜 ></p>
+			<%= date_field_tag :testdate %>
+			<p>< 시험 장소 ></p>
+			<%= text_field_tag :testplace %>
+		</div>
+		<div class="modal-footer">
+			<%= submit_tag '자격증 수정', data: { disable_with: '수정중...' }, class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+			<%= button_tag '취소', type: 'button', id: "canceleditAim", class: 'modal-action modal-close waves-effect waves-green btn-flat' %>
+		</div>
+	<% end %>
+</div>
