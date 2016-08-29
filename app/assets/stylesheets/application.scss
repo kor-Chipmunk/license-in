@@ -85,7 +85,6 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 .side-tab{
     margin-top: 30px;
     position: relative;
-    width: 70% !important;
 }
 
 
@@ -103,11 +102,12 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 
 
 footer {
-    padding-left: 200px;
+    padding-left: 85px;
 }
 
 
 .setting-menu-container {
+    z-index: 100;
     position: absolute;
     right: 0;
     display: none;

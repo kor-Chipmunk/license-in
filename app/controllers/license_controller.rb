@@ -1,4 +1,5 @@
 class LicenseController < ApplicationController
+    impressionist actions: [:show], unique: [:session_hash]
     def index
         redirect_to default_page
     end

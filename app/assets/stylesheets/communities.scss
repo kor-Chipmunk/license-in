@@ -3,14 +3,54 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
 .community {
     margin: 100px auto;
-    border-style: solid;
+    /*border-style: solid;*/
     border-color: gray;
     border-width: thin;
+    border-radius: 5px;
     background-color: white;
     font-size: 12px;
-    padding: 50px 10px;
+    padding: 40px 30px 30px;
+}
+
+
+.com-content {
+  padding: 0px 0px;
+  white-space: pre-line;
+  min-height: 150px;
+}
+
+.com-new {
+  border-radius: 5px;
+  resize: none;
+  height: 300px;
+  
+}
+
+
+.com-title:hover {
+  background-color: #eeeeee;
+}
+/*.centered-bordered: hover {
+  background-color: red;  
+}*/
+
+#community_title:focus {
+    border-bottom: 1px solid #e53935;
+    box-shadow: 0 1px 0 0 transparent;
+}
+
+#community_content:focus {
+  outline: none;
+  border: 1px solid #e53935;
+
+}
+
+
+.btn-wrapper {
+  text-align: right;
 }
 
 
@@ -22,7 +62,7 @@
     background-color: white;
     color: #f44336;
     width: 70px;
-    padding: 0;
+    padding: 0px;
     
 }
 
@@ -99,6 +139,35 @@ label {
   display: block;
 }
 
+
 .pagination {
   margin-top: 30px;
+  color: #424242;
+  
+  a{
+    padding: 2px 3px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    margin: 5px;
+  }
+
 }
+
+
+.pagination a:hover {
+  padding: 2px 3px;
+  background-color: #e53935;
+  border-radius: 3px;
+  color: white;
+}
+
+.pagination em {
+  font-weight: bold;
+  font-style: normal;
+  padding: 2px 3px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+

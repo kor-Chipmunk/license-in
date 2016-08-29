@@ -4,6 +4,9 @@ class CreateBooks < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :content
       t.integer :price
+      t.integer :user_id
+      t.string :image_url, default:""
+      t.string :avatar
 
       t.timestamps
     end

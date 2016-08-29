@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160823142519) do
+ActiveRecord::Schema.define(version: 20160828175252) do
 
   create_table "aim_license_containers", force: :cascade do |t|
     t.integer  "user_id"
@@ -18,45 +18,23 @@ ActiveRecord::Schema.define(version: 20160823142519) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "anony_comments", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "anony_post_id"
-    t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  create_table "anony_posts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "book_comments", force: :cascade do |t|
     t.text     "content"
-    t.integer  "anony_post_id"
-    t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  create_table "book_posts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "content"
+    t.integer  "book_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "avatar"
   end
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
     t.integer  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.string   "image_url",  default: ""
+    t.string   "avatar"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "bridge_major_and_licenses", force: :cascade do |t|
@@ -69,9 +47,17 @@ ActiveRecord::Schema.define(version: 20160823142519) do
   create_table "communities", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.integer  "hits"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "community_comments", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "community_id"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "got_license_containers", force: :cascade do |t|
@@ -90,6 +76,30 @@ ActiveRecord::Schema.define(version: 20160823142519) do
     t.integer  "got_license_container_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "impressions", force: :cascade do |t|
+    t.string   "impressionable_type"
+    t.integer  "impressionable_id"
+    t.integer  "user_id"
+    t.string   "controller_name"
+    t.string   "action_name"
+    t.string   "view_name"
+    t.string   "request_hash"
+    t.string   "ip_address"
+    t.string   "session_hash"
+    t.text     "message"
+    t.text     "referrer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["controller_name", "action_name", "ip_address"], name: "controlleraction_ip_index"
+    t.index ["controller_name", "action_name", "request_hash"], name: "controlleraction_request_index"
+    t.index ["controller_name", "action_name", "session_hash"], name: "controlleraction_session_index"
+    t.index ["impressionable_type", "impressionable_id", "ip_address"], name: "poly_ip_index"
+    t.index ["impressionable_type", "impressionable_id", "request_hash"], name: "poly_request_index"
+    t.index ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index"
+    t.index ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
+    t.index ["user_id"], name: "index_impressions_on_user_id"
   end
 
   create_table "licenses", force: :cascade do |t|
@@ -149,7 +159,6 @@ ActiveRecord::Schema.define(version: 20160823142519) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.integer  "total_post_views"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["nickname"], name: "index_users_on_nickname", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

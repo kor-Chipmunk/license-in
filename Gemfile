@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'carrierwave'
+gem "mini_magick"
 gem 'will_paginate', '~> 3.1.0'
+gem 'impressionist'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'

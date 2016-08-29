@@ -3,7 +3,7 @@ class CreateCommunities < ActiveRecord::Migration[5.0]
     create_table :communities do |t|
       t.string  :title
       t.text    :content
-      t.integer :hits
+      t.integer :user_id
       t.timestamps
     end
   end

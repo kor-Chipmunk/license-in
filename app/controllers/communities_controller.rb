@@ -1,16 +1,22 @@
 class CommunitiesController < ApplicationController
   before_action :set_community, only: [:show, :edit, :update, :destroy]
+  impressionist actions: [:show, :index], unique: [:session_hash]
 
   # GET /communities
   # GET /communities.json
   def index
-    #Community.increment_counter(:hits)
-    @communities = Community.all.paginate(:page => params[:page], per_page: 10).order("id desc")
+    if user_signed_in?
+      @communities = Community.all.paginate(:page => params[:page], per_page: 5).order("id desc")
+    else
+      redirect_to '/users/sign_in'
+    end
   end
 
   # GET /communities/1
   # GET /communities/1.json
   def show
+    @community = Community.find(params[:id])
+    impressionist(@community)
   end
 
   # GET /communities/new
@@ -27,8 +33,6 @@ class CommunitiesController < ApplicationController
   def create
     @community = Community.new(community_params)
     
-    
-
     respond_to do |format|
       if @community.save
         format.html { redirect_to @community, notice: '글을 성공적으로 작성하였습니다' }

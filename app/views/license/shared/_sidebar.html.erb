@@ -1,12 +1,89 @@
 
   <div id="nav-mobile" class="col s12">
     <ul class="tabs side-tab">
-      <li class="tab col s6"><a class="active" href="/license/myAim">목표자격증</a></li>
-      <li class="tab col s6"><a href="/license/myLicense">자격증관리</a></li>
+      <li class="tab col s6"><a class="active" href="#aimlicense">목표자격증</a></li>
+      <li class="tab col s6"><a href="#mylicense">자격증관리</a></li>
     </ul>
  </div>
  
 
+<!----목표자격증--->
+<!--%= render "license/shared/sidebar" %--->
+
+<div class="license">
+    <div id="aimlicense" class="aimContainer">
+        <h4 class="grey-text darken-1">목표 자격증</h4>
+        <div class="row">
+            <div class="col s3">
+                <div class="aim-card card-panel center-align valign-wrapper">
+                    <a class="btn-aim-card btn-floating waves-effect waves-light valign transparent modal-trigger" href="#addAim">
+                        <i class="aim-icon material-icons">add</i>    
+                    </a>
+                </div>
+            </div>
+            <div class="col s3">
+                <div class="aim-card card blue-grey darken-1 valign-wrapper">
+                    <div class="card-content white-text center-align valign">
+                      <span class="card-title"><span class="license-name">전기 기사</span> 시험까지</span>
+                      <p>
+                          <span class="d-day">50</span>일 남았습니다!
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="likeContainer">
+        <hr>
+        <h4 class="grey-text darken-1">관심 자격증</h4>
+        <hr>
+        <div class="row">
+            <div class="col s3">
+                <div class="aim-card card-panel center-align valign-wrapper">
+                    <a class="btn-aim-card btn-floating waves-effect waves-light valign transparent modal-trigger" href="#addLike">
+                        <i class="aim-icon material-icons">add</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+<!--자격증 관리--->
+<!--%= render "license/shared/sidebar" %--->
+<div class="license">    
+    <div class="row">
+        <div id="mylicense" class="col s9">
+            <div class="col s12 m4">
+            <div class="card manage-card">
+                <a class="btn btn-manage-card btn-floating waves-effect modal-trigger" href="#addLicense">
+                    <i class="icon manage-icon material-icons">add</i></a>
+                <!---div class="card-content white-text">
+                  <span class="card-title">Card Title</span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                  <a href="#">This is a link</a>
+                </div--->
+            </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+ 
+ 
+ 
+ 
+ 
+ 
  <script type="text/javascript">
      
   $(document).ready(function(){

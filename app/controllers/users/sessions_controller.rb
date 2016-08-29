@@ -1,5 +1,10 @@
 class Users::SessionsController < Devise::SessionsController
-# before_action :configure_sign_in_params, only: [:create]
+ #before_action :configure_sign_in_params, only: [:create]
+ before_filter :correct_user, only: [:edit, :update]
+
+  def edit
+    @user = User.find(params[:id])
+  end
 
   # GET /resource/sign_in
   # def new
@@ -22,4 +27,8 @@ class Users::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_path) unless current_user?(@user)
+  end
 end

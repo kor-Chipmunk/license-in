@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BookPostTest < ActiveSupport::TestCase
+class CommunityCommentTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

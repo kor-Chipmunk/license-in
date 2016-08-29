@@ -2,7 +2,6 @@
   <% if community.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(community.errors.count, "error") %> prohibited this community from being saved:</h2>
-
       <ul>
       <% community.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,16 +11,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title, :required => true %>
+    <!--%= f.label :title %--->
+    <%= f.text_field :title, :required => true, placeholder: "제목을 입력해주세요." %>
   </div>
 
   <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content, :required => true %>
+    <!--%= f.label :content %--->
+    <%= f.text_area :content, :required => true, :class => "com-new", placeholder: "내용을 입력해주세요." %>
   </div>
 
   <div class="actions">
     <%= f.submit "작성",  class: "btn btn-community" %>
+    <%= link_to '목록', communities_path,  class: "btn btn-community" %>
   </div>
-<% end %>
+  
+  <% end %>
